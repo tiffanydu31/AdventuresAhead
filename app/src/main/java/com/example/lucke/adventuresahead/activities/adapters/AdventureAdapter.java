@@ -5,7 +5,6 @@ import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,16 +14,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 import com.example.lucke.adventuresahead.R;
-import com.example.lucke.adventuresahead.activities.AdventuresMain;
 import com.example.lucke.adventuresahead.activities.CategoryActivity;
 import com.example.lucke.adventuresahead.activities.NotificationPublisher;
 import com.example.lucke.adventuresahead.models.Adventure;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -99,8 +94,5 @@ public class AdventureAdapter extends ArrayAdapter<Adventure>{
         long futureInMillis = SystemClock.elapsedRealtime() + delay;
         AlarmManager alarmManager = (AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE);
         alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, resultIntent);
-
-        Toast toast = Toast.makeText(getContext().getApplicationContext(), "adventureId: " + adventureId + ", notification set!", Toast.LENGTH_SHORT);
-        toast.show();
     }
 }

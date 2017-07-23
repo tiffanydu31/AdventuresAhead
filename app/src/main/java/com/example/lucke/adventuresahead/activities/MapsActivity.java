@@ -2,8 +2,8 @@ package com.example.lucke.adventuresahead.activities;
 
 import android.location.Address;
 import android.location.Geocoder;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
 
 import com.example.lucke.adventuresahead.R;
